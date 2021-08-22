@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
 import './FeaturedMovie.css';
 
@@ -27,11 +28,11 @@ export default ({item}) => {
                         <div className="featured--info">
                             <div className="featured--points">{item.vote_average} pontos</div>
                             <div className="featured--year">{firstDate.getFullYear()}</div>
-                            <div className="featured--seaons">{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''} </div>
+                            <div className="featured--seasons">{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''} </div>
                         </div>
                         <div className="featured--description">{description}</div>
                         <div className="featured--buttons">
-                            <a href={`/watch/${item.id}`} className="featured--watchbutton">► Asssitir</a>
+                            <a href={`/watch/${item.id}`} className="featured--watchbutton">► Assitir</a>
                             <a href={`/list/add/${item.id}`}className="featured--mylistbutton">+ Minha Lista</a>
                         </div>
                         <div className="featured--genres"><strong>Gêneros:</strong> {genres.join(', ')}</div>
